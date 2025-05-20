@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Easter Egg Hunt</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.34/moment-timezone-with-data-10-year-range.min.js"></script>
+    <style>
+         .egg-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .egg {
+            width: 100px;
+            height: 120px;
+            margin: 10px;
+            cursor: pointer;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border: none;
+            padding: 0;
+        }
+
+        #login-form {
+            margin-bottom: 20px;
+        }
+
+        #live-feed {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 300px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid #ccc;
+            overflow: hidden;
+        }
+
+        .feed-message {
+            margin-bottom: 5px;
+            display: none;
+        }
+
+        #cooldown-timer {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-weight: bold;
+            display: none;
+        }
+
+        #game-timer-container {
+          position: relative;
+        }
+
+        #game-timer {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        #final-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #4CAF50;
+            background-color: #f0fdf4;
+            margin-top: 20px;
+        }
+
+        #logo {
+            width: 200px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        #countdown {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <img id="logo" src="logo.png" alt="Your Logo">
+
+    <div id="countdown"></div>
+
+    <div id="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <label for="advisoryTeacher">Advisory Teacher:</label>
+        <input type="text" id="advisoryTeacher" name="advisoryTeacher" required><br><br>
+
+        <button id="login-button">Login</button>
+    </div>
+
+    <div id="game-timer-container">
+      <div id="game-timer"></div>
+    </div>
+
+    <div id="egg-container" style="display:none;">
+        <!-- Eggs will be dynamically added here -->
+    </div>
+
+    <div id="cooldown-timer">Cooldown: <span id="timer"></span> seconds</div>
+
+    <div id="live-feed"></div>
+    <div id="final-message"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
