@@ -22,9 +22,9 @@ const eggImagePaths = [
 ];
 const eggCounts = {
    'Gold': 5,
-   'Silver': 10,
-   'Bronze': 20,
-   'Bad egg': 15
+   'Silver': 30,
+   'Bronze': 320,
+   'Bad egg': 700
 };
 const cooldownSeconds = 45;
 const maxEggsPerUser = 2;
@@ -35,10 +35,10 @@ const LIVE_FEED_POLL_INTERVAL = 2000;
 
 // --- STATE VARIABLES ---
 let eggsHatchedByType = {
-   'Gold': 0,
-   'Silver': 0,
-   'Bronze': 0,
-   'Bad egg': 0
+   'Gold': 5,
+   'Silver': 30,
+   'Bronze': 320,
+   'Bad egg': 700
 };
 let userEggCount = {};
 let cooldownActive = false;
