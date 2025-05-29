@@ -11,7 +11,7 @@ const gameTimerDisplay = document.getElementById('game-timer');
 
 
 // --- CONFIGURATION -50
-const eventStartTimeString = '2025-05-29 06:50 PM'; //in UTC time -- Changed from 10:20 to 09:20 to make it actually start at 2:20
+const eventStartTimeString = '2025-05-29 09:50 PM'; //in UTC time -- Changed from 10:20 to 09:20 to make it actually start at 2:20
 console.log("Event Start Time", eventStartTimeString);
 
 
